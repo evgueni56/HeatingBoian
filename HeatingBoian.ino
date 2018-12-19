@@ -52,8 +52,6 @@ WidgetTerminal terminal(V2);
 char auth[] = "63020a5eab8540feac7e3301667233bb"; // Authentication key Mladost
 												  //char auth[] = "39e78a2de5b64d8dbb362ecdfa6703e5"; // Authentication key Rasho
 
-const char t_ssdi[] = "ehome_2", t_pw[] = "ewgekrs61";
-
 const int Rellay = 12;
 const int Led = 13;
 
@@ -132,7 +130,7 @@ void loop()
 #endif
 	if (manual_mode) // Set by a button press
 	{
-		HandleHeating(22.0); // Yes, start unconditional heating to 22°
+		HandleHeating(22.0); // Yes, start unconditional heating to 22Â°
 		if (SButton.pressed()) // Press button again to stop it
 		{
 			manual_mode = false;
@@ -141,7 +139,7 @@ void loop()
 		}
 		return; // Ignor the rest of the loop
 	}
-	if (SButton.pressed()) // Manually start heating at 22°
+	if (SButton.pressed()) // Manually start heating at 22Â°
 	{
 		if (!manual_mode)
 		{
